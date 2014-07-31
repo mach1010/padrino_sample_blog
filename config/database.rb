@@ -28,10 +28,10 @@ ActiveRecord::Base.configurations[:development] = {
 ActiveRecord::Base.configurations[:production] = {
   :adapter  => 'postgresql',
   :encoding => 'utf8',
-  :database => postgres.path[1..-1], 
-  :username => postgres.user,
-  :password => postgres.password,
-  :host     => postgres.host
+  :database => 'dep4s2k494odl4', 
+  :username => 'oorkstaapietgj',
+  :password => 'HwWuVQR4BP29jGMGmzYIzbuaRP',
+  :host     => 'ec2-23-23-244-144.compute-1.amazonaws.com'
 }
 
 ActiveRecord::Base.configurations[:test] = {
