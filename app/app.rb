@@ -5,7 +5,20 @@ module SampleBlog
     register Padrino::Mailer
     register Padrino::Helpers
 
+
+
+
+
     enable :sessions
+    
+    get '/' do
+      "Hello World"
+    end
+    
+    get :about, map: '/about_us' do
+      render :slim , "p This is an awesome Padrino Test Blog Tutorial"
+    end
+    
 
     ##
     # Caching support.

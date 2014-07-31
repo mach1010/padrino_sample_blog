@@ -16,8 +16,8 @@
 ActiveRecord::Base.configurations[:development] = {
   :adapter   => 'postgresql',
   :database  => 'test_blog_development',
-  :username  => 'root',
-  :password  => '',
+  :username  => 'postgres',
+  :password  => 'postgres',
   :host      => 'localhost',
   :port      => 5432
 
@@ -26,8 +26,8 @@ ActiveRecord::Base.configurations[:development] = {
 ActiveRecord::Base.configurations[:production] = {
   :adapter   => 'postgresql',
   :database  => 'test_blog_production',
-  :username  => 'root',
-  :password  => '',
+  :username  => 'postgres',
+  :password  => 'postgres',
   :host      => 'localhost',
   :port      => 5432
 
@@ -36,8 +36,8 @@ ActiveRecord::Base.configurations[:production] = {
 ActiveRecord::Base.configurations[:test] = {
   :adapter   => 'postgresql',
   :database  => 'test_blog_test',
-  :username  => 'root',
-  :password  => '',
+  :username  => 'postgres',
+  :password  => 'postgres',
   :host      => 'localhost',
   :port      => 5432
 
