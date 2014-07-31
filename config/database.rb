@@ -13,6 +13,8 @@
 #     :socket    => '/tmp/mysql.sock'
 #   }
 #
+postgres = URI.parse(ENV['DATABASE_URL'] || '')
+
 ActiveRecord::Base.configurations[:development] = {
   :adapter   => 'postgresql',
   :database  => 'test_blog_development',
@@ -24,13 +26,12 @@ ActiveRecord::Base.configurations[:development] = {
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter   => 'postgresql',
-  :database  => 'test_blog_production',
-  :username  => 'bill',
-  :password  => '',
-  :host      => 'localhost',
-  :port      => 5432
-
+  :adapter  => 'postgresql',
+  :encoding => 'utf8',
+  :database => postgres.path[1..-1], 
+  :username => postgres.user,
+  :password => postgres.password,
+  :host     => postgres.host
 }
 
 ActiveRecord::Base.configurations[:test] = {
