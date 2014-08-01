@@ -8,7 +8,7 @@ before_script:
   - padrino rake ar:migrate
   - padrino rake seed
 script:
-  - rspec
+  - bundle exec rspec
 deploy:
   provider: heroku
   api_key:
