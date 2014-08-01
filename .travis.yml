@@ -4,6 +4,7 @@ rvm:
 before_install:
   - gem install 'padrino'
 before_script:
+  - git checkout master
   - padrino rake ar:create
   - padrino rake ar:migrate
   - padrino rake seed
