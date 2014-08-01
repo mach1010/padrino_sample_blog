@@ -15,13 +15,11 @@
 #
 ActiveRecord::Base.configurations[:test] = {
   :adapter   => 'postgresql',
-  :encoding  => 'utf8'
+  :encoding  => 'utf8',
   :database  => 'padrino_sample_blog_test',
-  :pool      => 5
+  :pool      => 5,
   :username  => 'postgres',
-  :password  => '',
-  :host      => 'localhost'
-
+  :password  => ''
 }
 
 # Setup our logger
