@@ -3,17 +3,17 @@ rvm:
 - 2.1.2
 #before_install: 
 before_script:
-- bundle exec rake db:create:all
-- bundle exec rake db:migrate
-- bundle exec rake db:seed
+- padrino rake ar:create
+- padrino rake ar:migrate
+- padrino rake seed
 script:
-- bundle exec rspec
+- rspec
 deploy:
   provider: heroku
   api_key:
     secure: eONgtzPyQBwAOgGwz1P0oRxFdd/zdUWsWnvfcQvBGNn/BM3VMPEMwgaWvnPTPnk47+c63YkowHl8ia3j8hjK2n6QUMDPlSsWnaOM1cD6313mZoszC/siOV+35Et+hxSXLPgFWNYcQY4Cy9NISONhJoLf6sRgZI9dyd956ikLyRk=
   app: ancient-beyond-2712
   run:
-    - "rake db:migrate"
-    - "rake db:seed"
+    - "rake ar:migrate"
+    - "rake seed"
  
