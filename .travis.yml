@@ -5,6 +5,7 @@ before_install:
 before_script:
 - bundle exec rake db:create:all
 - bundle exec rake db:migrate
+- bundle exec rake db:seed
 script:
 - bundle exec rspec
 deploy:
@@ -12,3 +13,7 @@ deploy:
   api_key:
     secure: eONgtzPyQBwAOgGwz1P0oRxFdd/zdUWsWnvfcQvBGNn/BM3VMPEMwgaWvnPTPnk47+c63YkowHl8ia3j8hjK2n6QUMDPlSsWnaOM1cD6313mZoszC/siOV+35Et+hxSXLPgFWNYcQY4Cy9NISONhJoLf6sRgZI9dyd956ikLyRk=
   app: ancient-beyond-2712
+  run:
+    - "rake db:migrate"
+    - "rake db:seed"
+ 
