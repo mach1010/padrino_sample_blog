@@ -1,13 +1,14 @@
 language: ruby
 rvm:
 - 2.1.2
-#before_install: 
+before_install:
+  - gem install 'padrino'
 before_script:
-- padrino rake ar:create
-- padrino rake ar:migrate
-- padrino rake seed
+  - padrino rake ar:create
+  - padrino rake ar:migrate
+  - padrino rake seed
 script:
-- rspec
+  - rspec
 deploy:
   provider: heroku
   api_key:
