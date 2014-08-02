@@ -5,14 +5,10 @@ module SampleBlog
     register Padrino::Mailer
     register Padrino::Helpers
 
-
-
-
-
     enable :sessions
     
     get '/' do
-      "Hello World"
+      "Hello Mate"
     end
     
     get :about, map: '/about_us' do
