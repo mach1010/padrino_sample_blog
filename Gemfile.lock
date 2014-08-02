@@ -17,6 +17,11 @@ GEM
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     builder (3.2.2)
+    byebug (3.1.2)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
+    columnize (0.8.9)
+    debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     http_router (0.11.1)
       rack (>= 1.0.0)
@@ -109,6 +114,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (>= 3.1)
   bcrypt
+  byebug
   padrino (= 0.12.2)
   pg
   rack-test
